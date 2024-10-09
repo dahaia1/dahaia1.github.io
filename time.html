@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实时显示当前时间</title>
+</head>
+<body>
+    <div id="time"></div>
+    <script>
+         function getTime() {
+            var date = new Date();
+
+            // 年、月、日
+            var year = date.getFullYear();
+            var month = date.getMonth() + 1;
+            var wday = date.getDay();
+            var ms = date.getMilliseconds();
+            var day = date.getDate();
+	var timeInMs = Date.now();
+            // 时、分、秒
+            var hour = date.getHours();
+            var minute = date.getMinutes();
+            var second = date.getSeconds();
+            
+            // 实时显示
+            var element = document.getElementById('time');
+            
+            
+            element.innerHTML = '<h1>现在时间：' + year + '-' + month + '-' + day + ' ' + hour + ':' + minute + ':' +second+':'+ms+'<br/>时间戳秒：'+timeInMs/1000+'<br/>星期'+wday;
+            
+
+        }
+        setInterval('getTime()', 100);
+    </script>
+</body>
+</html>
