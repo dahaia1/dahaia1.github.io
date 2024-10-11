@@ -11,18 +11,22 @@
     <script>
          function getTime() {
             var date = new Date();
-var ndate = Lunar.fromDate(new Date());
- 
-var stra= ndate.toFullString();
-var strb=ndate.getSolar().toFullString()
+			var ndate = Lunar.fromDate(new Date());
+			var foto = Foto.fromLunar(ndate);
+			var tao = Tao.fromLunar(ndate);
 
+ 
+			var stra= ndate.toFullString();
+			var strb=ndate.getSolar().toFullString()
+			var d = SolarWeek.fromDate(date, 0);
+			var e = SolarSeason.fromDate(date);
             // 年、月、日
             var year = date.getFullYear();
             var month = date.getMonth() + 1;
             var wday = date.getDay();
             var ms = date.getMilliseconds();
             var day = date.getDate();
-	var timeInMs = Date.now();
+			var timeInMs = Date.now();
             // 时、分、秒
             var hour = date.getHours();
             var minute = date.getMinutes();
@@ -32,7 +36,7 @@ var strb=ndate.getSolar().toFullString()
             var element = document.getElementById('time');
             
             
-            element.innerHTML = stra+'<br/>'+strb
+            element.innerHTML = stra+'<br/>'+strb+' 第'+d.getIndexInYear()+'周 '+d.toFullString()+' 第'+e.getIndex()+'季度'+'<br/>'+foto.toFullString()+'<br/>'+tao.toFullString()
             
 
         }
