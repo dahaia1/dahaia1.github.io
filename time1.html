@@ -11,15 +11,13 @@
     <script>
          function getTime() {
             var date = new Date();
-			var ndate = Lunar.fromDate(new Date());
-			var foto = Foto.fromLunar(ndate);
-			var tao = Tao.fromLunar(ndate);
-
- 
-			var stra= ndate.toFullString();
-			var strb=ndate.getSolar().toFullString()
-			var d = SolarWeek.fromDate(date, 0);
-			var e = SolarSeason.fromDate(date);
+var ndate = Lunar.fromDate(new Date());
+var foto = Foto.fromLunar(ndate);
+var tao = Tao.fromLunar(ndate);
+var stra= ndate.toFullString();
+var strb=ndate.getSolar().toFullString()
+var d = SolarWeek.fromDate(date, 0);
+var e = SolarSeason.fromDate(date);
             // 年、月、日
             var year = date.getFullYear();
             var month = date.getMonth() + 1;
