@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>无标题文档</title>
+		<style type="text/css">
+			body{
+				font-family: "宋体";
+				font-size: 14px;
+			}
+			#box{
+				height: auto;
+				width: 900px;
+				margin: 0 auto;
+				padding: 20px;
+				background-color: #CFC;
+			}
+			h2{
+				text-align: center;
+				height: 20px;
+				line-height: 20px;
+			}
+			div{
+				height: 30px;
+			}
+			.bg3{
+				height: 200px;
+			}
+			.txt{
+				text-align: center;
+			}
+			p{
+				text-align: center;
+			}
+			img{
+				width: 100px;
+				height: 100px;
+			}
+			
+			
+		</style>
+	</head>
+	<body>
+		<div id="box">
+		<form method="post" action="#">
+			<h2>用户注册</h2>
+			<div>
+				<span>昵&nbsp;&nbsp;称</span>
+				<input type="text" required="required"/>
+			</div>
+			<div>
+				<span>密&nbsp;&nbsp;码</span>
+				<input type="password" required="required"/>
+			</div>
+			<div>
+				<span>确认密码</span>
+				<input type="password" required="required"/>
+			</div>
+			<div>
+				<span>性&nbsp;&nbsp;别</span>
+				<input name="radio" type="radio" checked="checked"/>男
+				<input type="radio" name="radio"/>女*
+			</div>
+			<div>
+				<span>所在城市：</span>
+				<select>
+					<option>烟台</option>
+					<option selected="selected">济南</option>
+					<option>沈阳</option>
+					<option>北京</option>
+				</select>
+			</div>
+			<div>
+				<span>兴趣爱好：</span>
+				<input type="checkbox"/>看书
+				<input type="checkbox"/>上网
+				<input type="checkbox"/>游戏
+				<input type="checkbox"/>运动
+				<input type="checkbox"/>旅游
+				<input type="checkbox"/>购物
+			</div>
+			<div class="bg3">
+				<span>选择头像：</span>
+				<p>
+					<input type="radio" name="radio3" checked="checked"/>
+					<img src="img/1.png"/>
+					<input type="radio" name="radio3"/>
+					<img src="img/2.png"/>
+					<input type="radio" name="radio3"/>
+					<img src="img/3.png"/>
+					<input type="radio" name="radio3"/>
+					<img src="img/4.png"/>
+					<input type="radio" name="radio3"/>
+					<img src="img/5.png"/>
+					<input type="radio" name="radio3"/>
+					<img src="img/6.png"/>
+					
+				</p>
+			</div>
+			<div>
+				<span>联系电话</span>
+				<input type="tel" required="required"/>
+			</div>
+			<div class="txt">
+				<input type="submit" value="注册"/>&nbsp;&nbsp;
+				<input type="reset" value="取消"/>
+			</div>
+		</form>
+		
+		</div>
+		
+	</body>
+</html>
